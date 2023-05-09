@@ -1,7 +1,7 @@
 import pymongo
 from datetime import datetime
 from fetchdata import fetch
-from keys import sendgridKey, mongoKey
+from keys import sendgridKey, mongoKey, mailID
 import sendgrid
 import os
 from sendgrid.helpers.mail import Mail, Email, To, Content
@@ -42,7 +42,7 @@ while 1:
         my_sg = sendgrid.SendGridAPIClient(sendgridKey)
 
         # Change to your verified sender
-        from_email = Email("pritish.kr3@gmail.com")
+        from_email = Email(mailID)
 
         # Change to your recipient
         emailvar = data['email id']

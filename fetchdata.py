@@ -3,7 +3,7 @@ import time
 import pymongo
 import numpy as np
 import face_recognition
-from keys import sendgridKey, mongoKey
+from keys import sendgridKey, mongoKey, mailID
 
 
 def fetch():
